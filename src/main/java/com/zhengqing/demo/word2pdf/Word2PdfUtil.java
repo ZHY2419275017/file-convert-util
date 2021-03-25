@@ -1,5 +1,8 @@
 package com.zhengqing.demo.word2pdf;
 
+import java.awt.*;
+import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -7,6 +10,9 @@ import java.io.File;
 import com.aspose.words.Document;
 import com.aspose.words.SaveFormat;
 
+import com.aspose.words.Section;
+import com.itextpdf.text.pdf.PdfDocument;
+import com.itextpdf.text.pdf.PdfImage;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -57,5 +63,4 @@ public class Word2PdfUtil {
         document.save(pdfFilePath, SaveFormat.PDF);
         return new File(pdfFilePath);
     }
-
 }
